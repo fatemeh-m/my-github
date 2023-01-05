@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Patrick Hand";
+    font-size: 20px;
+}
+
+/*
+    The body use flex display and has a background image. 
+*/
+
+body{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./resources/social.jpg);
+    background-size: cover;
+}
+
+/*
+    The container holds all objects in grid display. 
+*/
+
+.container{
+    width: 60%;
+    background-color: rgba(211, 211, 211, 0.7);
+    border-radius: 50px;
+    padding: 50px 50px 20px 50px;
+    
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 300px;
+}
+
+/*
+    Styles of result section with grid display. 
+*/
+
+.content-section{
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 30px;
+    color: rgb(49, 49, 49);
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
+}
+
+.user-info-section{
+    text-align: center;
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-auto-rows: 20px;
+}
+
+/*
+    Set user avatar size and border radius. 
+*/
+
+.user-avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.user-bio{
+    grid-column: 1/3;
+}
+
+/*
+    Styles of Search section with flex display. 
+*/
+
+.search-section{
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 30px;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+
+/*
+    Set styles for submit button. 
+*/
+
+.submit-btn{
+    height: 50px;
+    background-color: unset;
+    border: 2px solid blueviolet;
+    color: whitesmoke;
+    border-radius: 7px;
+    font-size: larger;
+    transition: 0.3s;
+}
+.submit-btn:hover{
+    color: blueviolet;
+    font-weight: bolder;
+}
+
+/*
+    Set styles for input in search section. 
+*/
+
+.input{
+    height: 50px;
+    padding: 5px;
+    background-color: lightgrey;
+    color: rgb(150, 108, 180);
+    border: none;
+    border-radius: 7px;
+}
+
+/*
+    Default styles for error messages. 
+*/
+
+.invalid-user, .error{
+    visibility: hidden;
+    color: red;
+    font-style: italic;
+    font-weight: lighter;
+}
